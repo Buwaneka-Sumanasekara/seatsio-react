@@ -1,7 +1,7 @@
 import HomePage from "./Home";
-import ChartDesignerPage from "./ChartDesigner";
-
+import ChartDesignerHomePage from "./ChartDesigner/All";
+import ChartDesignerCreatePage from "./ChartDesigner/New";
 
 export{
-    HomePage,ChartDesignerPage
+    HomePage,ChartDesignerHomePage,ChartDesignerCreatePage
 }

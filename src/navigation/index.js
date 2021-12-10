@@ -1,14 +1,15 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import {HomePage,ChartDesignerPage} from "../../src/pages";
+import {HomePage,ChartDesignerHomePage,ChartDesignerCreatePage} from "../../src/pages";
 
 function Navigation() {
   return (
     <BrowserRouter>
         <Switch>
           <Route path="/" component={HomePage} exact/>
-          <Route path="/chart-designer" component={ChartDesignerPage} exact/>
+          <Route path="/chart-designer" component={ChartDesignerHomePage} exact/>
+          <Route path="/chart-designer/new" component={ChartDesignerCreatePage} exact/>
         </Switch>
     </BrowserRouter>
   );

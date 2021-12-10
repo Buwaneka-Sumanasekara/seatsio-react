@@ -1,5 +1,5 @@
 import axios from 'axios';
-import base64 from 'react-native-base64';
+import base64 from 'base-64';
 import Globals from '../constants/Globals';
 
 const baseURL = `https://api-${Globals.WorkspaceDetails.Region}.seatsio.net`;

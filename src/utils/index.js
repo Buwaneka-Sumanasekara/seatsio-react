@@ -1,4 +1,4 @@
-import { showMessage, hideMessage } from "react-native-flash-message";
+
 import { v4 as uuidv4 } from 'uuid';
 
 function generateQueryParameter(data_obj, allowEmptyStrings = false) {
@@ -34,30 +34,9 @@ function generateQueryParameter(data_obj, allowEmptyStrings = false) {
   return str;
 }
 
-function showErrorMessage(body,title=""){
-  showMessage({
-    message:title,
-    description:body,
-    type: "danger",
-  });
-}
 
-function showSuccessMessage(body,title=""){
-  showMessage({
-    message:title,
-    description:body,
-    type: "success",
-  });
-}
-function showWarningMessage(body,title=""){
-  showMessage({
-    message:title,
-    description:body,
-    type: "warning",
-  });
-}
 function generateUniqueOrderId(){
 return uuidv4();
 }
 
-export {generateQueryParameter,showErrorMessage,showSuccessMessage,showWarningMessage,generateUniqueOrderId};
+export {generateQueryParameter,generateUniqueOrderId};
