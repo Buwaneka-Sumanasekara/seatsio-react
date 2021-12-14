@@ -1,5 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {useQuery} from 'react-query';
+import React from 'react';
 import { SeatsioEventManager } from '@seatsio/seatsio-react'
 import Globals from "../../../constants/Globals";
 import { useParams } from "react-router-dom";
