@@ -1,7 +1,7 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React from 'react';
 import {useQuery} from 'react-query';
-import { Button } from "@blueprintjs/core";
 import {Table,Image} from 'react-bootstrap'
+import { Button } from "@blueprintjs/core";
 import { useNavigate } from "react-router-dom";
 import WrapperDefault from '../../../components/wrappers/Default';
 
@@ -34,7 +34,7 @@ const AllEventsPage = props => {
         {arItems.map((value,index)=>(
           <tr>
              <td>{value.id}</td>
-             <td></td>
+             <td><Button icon="edit" onClick={()=>navigate(`/event/${value.key}`)} /></td>
           </tr>
         ))}
         
