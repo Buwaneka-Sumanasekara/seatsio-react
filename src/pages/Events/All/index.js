@@ -6,43 +6,35 @@ import { useNavigate } from "react-router-dom";
 import WrapperDefault from '../../../components/wrappers/Default';
 
 
-import {ChartsApi} from '../../../api';
+import {EventsApi} from '../../../api';
 
 import './style.scss';
 
-const getCharts = async () => {
-  const res = await ChartsApi.getAllCharts(10);
+const getAllEvents = async () => {
+  const res = await EventsApi.getAllEvents(10);
   return res.data;
 };
 
-const ChartListPage = props => {
+const AllEventsPage = props => {
   let navigate = useNavigate();
 
-   const {data, status} = useQuery('charts', getCharts);
+   const {data, status} = useQuery('events', getAllEvents);
   const arItems = (data?.items?data.items:[]);
 
-
-console.log(data);
   return (
-    <WrapperDefault title={"List of Charts"}>
+    <WrapperDefault title={"List of Events"}>
        <Table>
        <thead>
           <tr>
             <th>#</th>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Status</th>
             <th></th>
           </tr>
       </thead>
       <tbody>
         {arItems.map((value,index)=>(
           <tr>
-            <td> <Image className='chart-thumbnail' src={value.publishedVersionThumbnailUrl} rounded fluid thumbnail /></td>
-            <td>{value.id}</td>
-            <td>{value.name}</td>
-            <td>{value.status}</td>
-            <td><Button icon="edit" onClick={()=>navigate(`/chart-designer/${value.key}`)} /></td>
+             <td>{value.id}</td>
+             <td></td>
           </tr>
         ))}
         
@@ -54,4 +46,4 @@ console.log(data);
 
 
 
-export default ChartListPage;
+export default AllEventsPage;

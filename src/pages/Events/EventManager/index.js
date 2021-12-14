@@ -4,12 +4,11 @@ import { SeatsioDesigner } from '@seatsio/seatsio-react'
 import Globals from "../../../constants/Globals";
 import { useParams } from "react-router-dom";
 
-const ChartDesignerNewPage = props => {
-  const { navigation} = props;
+const EventPage = props => {
+
 
   let Params = useParams();
 
-console.log(Params)
   return (
     <SeatsioDesigner
       secretKey={Globals.WorkspaceDetails.SecretId}    
@@ -21,4 +20,4 @@ console.log(Params)
 
 
 
-export default ChartDesignerNewPage;
+export default EventPage;
